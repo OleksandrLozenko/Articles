@@ -18,7 +18,7 @@ public class Tag {
     private Long id;
 
     @Column(nullable = false, length = 6)
-    private Date created_at;
+    private Date createdAt;
 
     @Column(nullable = false, length = 20)
     private String name;
