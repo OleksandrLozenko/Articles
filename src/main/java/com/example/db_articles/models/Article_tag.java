@@ -11,22 +11,22 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table (name = "article_tags")
+@Table (name = "articleTags")
 public class Article_tag {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, length = 6)
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     @ManyToOne
     @JoinColumn (name = "article_id")
-    private Article article_id;
+    private Article articleId;
 
     @ManyToOne
-    @JoinColumn (name = "tag_id")
-    private Tag tag_id;
+    @JoinColumn (name = "tagId")
+    private Tag tagId;
 
 
 }
