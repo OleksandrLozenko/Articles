@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table (name = "article_comments")
+@Table (name = "articleComments")
 public class Article_comment {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -24,11 +24,11 @@ public class Article_comment {
     private LocalDateTime created_at;
 
     @ManyToOne
-    @JoinColumn (name = "author_id")
-    private User user_;
+    @JoinColumn (name = "authorId")
+    private User userId;
 
     @ManyToOne
-    @JoinColumn (name = "article_id")
+    @JoinColumn (name = "articleId")
     private Article article;
 
 
