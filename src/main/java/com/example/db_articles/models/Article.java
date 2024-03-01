@@ -30,13 +30,13 @@ public class Article {
     private String content;
 
     @Column(nullable = false, length = 6)
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     @Column(nullable = false, length = 6)
-    private LocalDateTime  updated_at;
+    private LocalDateTime  updatedAt;
 
     @ManyToOne
-    @JoinColumn (name = "author_id")
+    @JoinColumn (name = "authorId")
     private User user;
 
 
