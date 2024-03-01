@@ -10,22 +10,22 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table (name = "user_follows")
+@Table (name = "userFollows")
 public class User_follow {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, length = 6)
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     @ManyToOne
-    @JoinColumn (name = "follower_id")
-    private User user_id;
+    @JoinColumn (name = "followerId")
+    private User userId;
 
     @ManyToOne
-    @JoinColumn (name = "following_id")
-    private Article article_id;
+    @JoinColumn (name = "followingId")
+    private Article articleId;
 
 
 
