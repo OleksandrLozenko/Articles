@@ -31,10 +31,10 @@ public class User {
     private String bio;
 
     @Column(nullable = false)
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     @Column(nullable = false, length = 200)
-    private String image_url;
+    private String imageUrl;
 
     @OneToMany(mappedBy = "user")
     private List<Article> articles;
